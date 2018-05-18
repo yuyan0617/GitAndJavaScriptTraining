@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const resolve = location => path.resolve( __dirname, location )
+const resolve = location => path.resolve(__dirname, location)
 
 const MODE = process.env.MODE || 'development'
 
@@ -19,19 +19,19 @@ module.exports = {
             loader: 'css-loader',
             options: {
               minimize: true,
-              sourceMap: MODE === 'development',
+              sourceMap: MODE === 'development'
             }
-          },
-        ],
+          }
+        ]
       },
       {
         test: /\.html$/,
-        loader: "html-loader"
+        loader: 'html-loader'
       },
       {
         test: /\.(gif|png|jpg|svg)$/,
         loader: 'url-loader'
-      },
+      }
     ]
   },
   output: {
