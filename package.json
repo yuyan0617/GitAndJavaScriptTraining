@@ -1,38 +1,32 @@
 {
-  "scripts": {
-    "lint": "eslint src --fix; exit 0",
-    "test": "eslint src"
-  },
   "eslintConfig": {
-    "root": true,
     "env": {
       "browser": true,
       "es6": true
     },
     "extends": "eslint:recommended",
+    "plugins": [
+      "prettier"
+    ],
+    "root": true,
     "rules": {
-      "indent": [
+      "prettier/prettier": [
         "error",
-        2
-      ],
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
-      "quotes": [
-        "error",
-        "single"
-      ],
-      "semi": [
-        "error",
-        "never"
-      ],
-      "no-console": [
-        "off"
+        {
+          "semi": false,
+          "singleQuote": true
+        }
       ]
     }
   },
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.12.1"
+  },
+  "scripts": {
+    "lint": "eslint src --fix; exit 0",
+    "test": "eslint src"
   }
 }
