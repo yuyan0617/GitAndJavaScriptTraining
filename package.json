@@ -1,50 +1,8 @@
 {
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "prettier"
-    ],
-    "root": true,
-    "rules": {
-      "no-console": [
-        "off"
-      ],
-      "no-var": [
-        "error"
-      ],
-      "prettier/prettier": [
-        "error",
-        {
-          "semi": false,
-          "singleQuote": true
-        }
-      ]
-    }
+  "scripts": {
+    "prettify": "prettier src/**/*.js --write --no-semi false --single-quote true"
   },
   "devDependencies": {
-    "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "prettier": "^1.12.1",
-    "style-loader": "^0.21.0",
-    "url-loader": "^1.0.1",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.3"
-  },
-  "scripts": {
-    "build": "rimraf dist && webpack",
-    "lint": "eslint src --fix; exit 0",
-    "test": "eslint src"
+    "prettier": "^1.12.1"
   }
 }
