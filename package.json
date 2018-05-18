@@ -2,9 +2,13 @@
   "eslintConfig": {
     "env": {
       "browser": true,
-      "es6": true
+      "node": true
     },
     "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
     "plugins": [
       "prettier"
     ],
@@ -12,6 +16,9 @@
     "rules": {
       "no-console": [
         "off"
+      ],
+      "no-var": [
+        "error"
       ],
       "prettier/prettier": [
         "error",
