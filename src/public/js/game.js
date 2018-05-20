@@ -60,7 +60,8 @@ const createGame = () => {
     actions.send('login', {
       name: CHARACTER_NAME,
       x: CHARACTER_DEFAULT_POSITION_X,
-      y: CHARACTER_DEFAULT_POSITION_Y
+      y: CHARACTER_DEFAULT_POSITION_Y,
+      isAllPassed: isAllPassed
     })
   })
 

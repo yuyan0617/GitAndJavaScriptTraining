@@ -7,9 +7,9 @@ addEventListener('load', () => {
   // Connect to the WebSocket server used in Multiplayer
   const webSocket = new WebSocket(
     'ws' +
-      (MULTIPLAY_SERVER.indexOf('https://') !== -1 ? 's' : '') +
+      (MULTIPLAYER_SERVER.indexOf('https://') !== -1 ? 's' : '') +
       '://' +
-      MULTIPLAY_SERVER.replace(/http(s*)\:\/\//, '')
+      MULTIPLAYER_SERVER.replace(/http(s*)\:\/\//, '')
   )
 
   // Send message to WebSocket server
