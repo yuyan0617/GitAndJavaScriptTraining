@@ -1,6 +1,7 @@
 {
   "main": "src",
   "scripts": {
+    "start": "node .",
     "prettify": "prettier src/**/*.js !src/public/js/enchant.js !src/public/practice/map.js --write --no-semi false --single-quote true"
   },
   "devDependencies": {
