@@ -2,7 +2,7 @@
 const CHARACTER_NAME = 'yuyan'
 
 // 初期位置
-const CHARACTER_DEFAULT_POSITION_X = 6
+const CHARACTER_DEFAULT_POSITION_X = 7
 const CHARACTER_DEFAULT_POSITION_Y = 10
 
 // 複数人でプレイする際に使用するサーバのアドレス
