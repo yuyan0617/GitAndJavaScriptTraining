@@ -13,13 +13,13 @@ const getPlayerDirection = game => {
   let direction
 
   if (game.input.left) {
-    direction = DOWN
-  } else if (game.input.right) {
-    direction = UP
-  } else if (game.input.up) {
-    direction = RIGHT
-  } else if (game.input.down) {
     direction = LEFT
+  } else if (game.input.right) {
+    direction = RIGHT
+  } else if (game.input.up) {
+    direction = UP
+  } else if (game.input.down) {
+    direction = DOWN
   }
 
   return direction
