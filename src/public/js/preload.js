@@ -9,6 +9,7 @@ const SCREEN_WIDTH = 320
 const SCREEN_HEIGHT = 240
 const MAP_IMAGE = 'img/map.gif'
 const CHARACTER_IMAGE = 'img/chara.gif'
+const CLEAR_IMAGE = 'img/clear.png'
 const ID = Math.random()
   .toString(36)
   .slice(-10)

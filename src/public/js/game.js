@@ -3,7 +3,7 @@ const createGame = () => {
 
   game.fps = FPS
   game.scale = 2
-  game.preload(MAP_IMAGE, CHARACTER_IMAGE)
+  game.preload(MAP_IMAGE, CLEAR_IMAGE, CHARACTER_IMAGE)
 
   // ゲームの読み込みが完了した際に実行する
   game.addEventListener('load', () => {
@@ -31,6 +31,21 @@ const createGame = () => {
     // 複数のプレイヤーをまとめるために使用する
     const playerStage = new Group()
     playerStage.addChild(player.getStage())
+
+    const showClearScene = () => {
+      const gameClearScene = new Scene()
+      const gameClear = new Sprite(267, 48)
+      gameClear.image = game.assets[CLEAR_IMAGE]
+      gameClear.x = 0 - stage.x + (game.width - gameClear.width) / 2
+      gameClear.y = 0 - stage.y + (game.height - gameClear.height) / 2
+      gameClearScene.addChild(gameClear)
+      stage.addChild(gameClearScene)
+      setTimeout(() => {
+        stage.removeChild(gameClearScene)
+      }, 5000)
+    }
+
+    actions.showClearScene = showClearScene
 
     stage.addChild(map)
     stage.addChild(playerStage)
@@ -75,6 +90,13 @@ const createGame = () => {
       })
       // プレイヤーに発言させる
       states.player.say(input.value)
+      if (input.value.indexOf('クリア') !== -1) {
+        if (isAllPassed) {
+          actions.showClearScene()
+        } else {
+          states.player.say('（まだクリアできていない...）')
+        }
+      }
       // 入力に使用する textarea の中を空にする
       input.value = ''
     }
