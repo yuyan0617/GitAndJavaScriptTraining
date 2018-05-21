@@ -1,5 +1,5 @@
 // プレイヤーの名前
-const CHARACTER_NAME = 'Guest'
+const CHARACTER_NAME = 'yuyan'
 
 // 初期位置
 const CHARACTER_DEFAULT_POSITION_X = 6
