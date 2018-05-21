@@ -6,7 +6,7 @@ const CHARACTER_DEFAULT_POSITION_X = 6
 const CHARACTER_DEFAULT_POSITION_Y = 10
 
 // 複数人でプレイする際に使用するサーバのアドレス
-const MULTIPLAYER_SERVER = 'http://localhost:3000/'
+const MULTIPLAYER_SERVER = 'https://evening-reaches-62725.herokuapp.com/'
 
 // 入力しているキーの情報からプレイヤーの向きを決定する
 const getPlayerDirection = game => {
